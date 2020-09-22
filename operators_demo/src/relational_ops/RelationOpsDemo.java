@@ -51,7 +51,15 @@ public class RelationOpsDemo {
 		System.out.println("Not equal to operator: 81 != 38 = " + (81 != 38));
 		System.out.println("Not equal to operator: 76 != 76 = " + (76 != 76));
 		
-		System.out.println("Less than or equal to operator: 32 >= 19 = " + (32 >= 19));
+		System.out.println("Greater than or equal to operator: 32 >= 19 = " + (32 >= 19));
+		System.out.println("Greater than or equal to operator: 32 >= 32 = " + (32 >= 32));
+		System.out.println("Greater than or equal to operator: 19 >= 19 = " + (19 >= 19));
+		System.out.println("Greater than or equal to operator: 19 >= 32 = " + (19 >= 32));
+		
+		System.out.println("Less than or equal to operator: 56 <= 94 = " + (56 <= 94));
+		System.out.println("Less than or equal to operator: 56 <= 56 = " + (56 <= 56));
+		System.out.println("Less than or equal to operator: 94 <= 94 = " + (94 <= 94));
+		System.out.println("Less than or equal to operator: 94 <= 56 = " + (94 <= 56));
 	}
 
 }
