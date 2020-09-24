@@ -1,0 +1,32 @@
+package regex;
+
+public class ValidateDLRegExStyle {
+
+	public static void main(String[] args) {
+		/*
+		 * First 2 uppercase letters
+		 * and a hyphen, and 
+		 * Followed by 5 digits
+		 * and a hyphen, and 1 uppercase letter
+		 * 
+		 * total of 10 characters
+		 * */
+		String dL = "AD-56783-D";
+		
+		//(below) solves the same problem as the boilerplate code in "ValidateDLDemo" but with less code
+		//"matches" looks for a regex
+		if(dL.matches("[A-Z]{2}-[0-9]{5}-[A-Z]{1}")){
+			System.out.println(dL + " VALIDATED");
+		}else{
+			System.out.println(dL + " is INVALID");
+		}
+
+		
+		//+1-9123456780
+		//"\\+1-[0-9]{10}"
+		//"+" is a metacharacter, so we need an escape seq: "\\"
+		//escape char "\\" is a special char that removes and handles metacharacters
+		//when using metacharacters, make sure you use \\ behind the metacharacter to avoid any error
+	}
+
+}

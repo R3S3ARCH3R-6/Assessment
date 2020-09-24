@@ -1,0 +1,25 @@
+package regex;
+
+public class ValidateDLRegExStyle {
+
+	public static void main(String[] args) {
+		/*
+		 * First 2 uppercase letters
+		 * and a hyphen, and 
+		 * Followed by 5 digits
+		 * and a hyphen, and 1 uppercase letter
+		 * 
+		 * total of 10 characters
+		 * */
+		String dL = "AD-56783-D";
+		
+		//"matches" looks for a regex
+		if(dL.matches("[A-Z]{2}-[0-9]{5}-[A-Z]{1}")){
+			System.out.println(dL + "VALID");
+		}else{
+			System.out.println(dL + "is INVALID");
+		}
+
+	}
+
+}

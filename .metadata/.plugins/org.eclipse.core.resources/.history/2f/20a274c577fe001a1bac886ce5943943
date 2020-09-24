@@ -1,0 +1,48 @@
+package char_wrapper_demo;
+
+public class ValidateDLDemo {
+
+	public static void main(String[] args) {
+		/*
+		 * First 2 uppercase letters
+		 * and a hyphen, and 
+		 * Followed by 5 digits
+		 * and a hyphen, and 1 uppercase letter
+		 * 
+		 * total of 10 characters
+		 * */
+		String dL = "AE-56783-Y";
+		
+		//check to see if the user entered the valid license or not
+		boolean b= false;
+		if(dL.length() == 10 && Character.isUpperCase(dL.charAt(9)) && dL.charAt(8) == '-'){
+			
+			//checking to see if the 1st 2 chars are uppercase letters:
+			int upper =0;
+			for(int i = 0; i < 2; i++){
+				if(Character.isUpperCase(dL.charAt(i))){
+					upper++;
+				}
+			}
+			//if 2 uppercase char start the seq and is followed by a hyphen:...
+			if(upper == 2 && dL.charAt(2) == '-'){
+				//checking if the next 5 characters are numbers
+				int digit = 0;
+				for(int i = 3; i < 8; i++){
+					digit++;
+				}
+				//if the loop passes the test, the license number is valid 
+				if(digit==5){
+					b=true;
+				}
+			}
+		}
+		
+		if(b){
+			System.out.println("This is a valid driver's license.");
+		}else{
+			System.out.println("This is an invalid driver's license.");
+		}
+	}
+
+}
