@@ -45,7 +45,6 @@ public class array_assignment {
 				
 			}else{
 				System.out.println("The word is not a palindrome.");
-				break;
 			}
 		}
 	}
@@ -78,12 +77,6 @@ public class array_assignment {
 		String pal3 = "nine";
 		System.out.println(pal3);
 		palindrome(pal3);
-		System.out.println();
-		
-		String pal4 = "Wesley";
-		System.out.println(pal4);
-		palindrome(pal4);
-		System.out.println();
 	}
 
 }

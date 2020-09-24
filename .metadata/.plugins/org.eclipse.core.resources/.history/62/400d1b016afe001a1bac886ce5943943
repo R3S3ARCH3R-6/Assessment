@@ -39,13 +39,12 @@ public class array_assignment {
 				if(n >= i){
 					System.out.println("The word is a palindrome");
 					break;
-				}else{
+				}else){
 					n--;
 				}
 				
 			}else{
 				System.out.println("The word is not a palindrome.");
-				break;
 			}
 		}
 	}
@@ -69,21 +68,9 @@ public class array_assignment {
 		System.out.println(pal);
 		palindrome(pal);
 		System.out.println();
-		
 		String pal2 = "noon";
 		System.out.println(pal2);
 		palindrome(pal2);
-		System.out.println();
-		
-		String pal3 = "nine";
-		System.out.println(pal3);
-		palindrome(pal3);
-		System.out.println();
-		
-		String pal4 = "Wesley";
-		System.out.println(pal4);
-		palindrome(pal4);
-		System.out.println();
 	}
 
 }
