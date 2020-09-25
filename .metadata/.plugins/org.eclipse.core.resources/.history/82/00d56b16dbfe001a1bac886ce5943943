@@ -1,0 +1,19 @@
+package wrap_classes;
+
+public class FloatWrapEx {
+
+	public static void main(String[] args) {
+		Float f1 = 13f;	//common Object pool
+		Float f2 = 13f;
+		Float f3 = 23f;
+		Float f4 = new Float(13f);	//heap memort
+		
+		System.out.println("f1 == f2" + (f1 == f2));	//points to the same address
+		System.out.println("f1 == f3" + (f1 == f3));	
+		System.out.println("f1 == f4" + (f1 == f4));
+		System.out.println();
+		
+		System.out.println("f1.equals(f2)" + (f1 == f2));	//points to the same address
+	}
+
+}

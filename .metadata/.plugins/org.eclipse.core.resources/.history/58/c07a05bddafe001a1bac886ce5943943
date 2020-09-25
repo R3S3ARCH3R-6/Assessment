@@ -1,0 +1,11 @@
+package wrap_classes;
+
+public class FloatWrapEx {
+
+	public static void main(String[] args) {
+		Float f1 = 13f;
+		
+
+	}
+
+}

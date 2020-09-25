@@ -1,0 +1,28 @@
+package ex1;
+
+public class Demo1 {
+
+	public static void main(String[] args) {
+		
+		//normal scenario
+		int a = 10;
+		int b = 2;
+		int res = 0;
+		
+		res = a/b;
+		System.out.println("Result is " + res);
+		System.out.println("This are other lines of code in my app");
+		System.out.println();
+		
+		//exception/error scenario
+		int a2 = 10;
+		int b2 = 0;
+		int res2 = 0;
+				
+				res2 = a2/b2;
+				System.out.println("Result is " + res);
+				System.out.println("This are other lines of code in my app");
+				
+	}
+
+}

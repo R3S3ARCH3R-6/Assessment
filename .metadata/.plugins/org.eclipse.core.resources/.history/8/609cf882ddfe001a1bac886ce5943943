@@ -1,0 +1,10 @@
+package wrap_classes;
+
+public class LongWrapEx {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
