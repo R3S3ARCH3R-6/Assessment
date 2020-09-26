@@ -1,0 +1,15 @@
+package eg1;
+
+//inherits elem from MobileV1 too b/c MobileV2 extends MobileV1
+//this is an ex of multi-level inheritance
+	//there is no limit to the level of inheritance
+public class MobileV3 extends MobileV2{
+	
+	public void videoCalling(){
+		System.out.println("Video calling feature from V3");
+	}
+	
+	public void camera(){
+		System.out.println("Capture pictures using camera from V3");
+	}
+}

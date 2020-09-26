@@ -1,0 +1,13 @@
+package eg1;
+
+public class DemoMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Demo1 d = new Demo1();
+		Demo1.Y x = new Y();
+		x.helloY();
+	}
+
+}

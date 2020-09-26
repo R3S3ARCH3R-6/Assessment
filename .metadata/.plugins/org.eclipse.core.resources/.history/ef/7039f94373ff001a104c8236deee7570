@@ -1,0 +1,32 @@
+package abstractionclass_demo;
+
+//compiler doesn't like this b/c we need to override the abstract methods we've inherited from EMS
+public class AbcEmployer extends EMS {
+
+	@Override
+	public void createEmployee() {
+		System.out.println("Abc Employee created in Oracle DB");
+	}
+
+	@Override
+	public void updateProject() {
+		// TODO Auto-generated method stub
+		System.out.println("Abc Employee got updated in Oracle DB");
+	}
+
+	@Override
+	public void deleteEmployee() {
+		// TODO Auto-generated method stub
+		System.out.println("Abc Employee got deleted in Oracle DB");
+		
+	}
+
+	@Override
+	public void getEmployee() {
+		// TODO Auto-generated method stub
+		System.out.println("Abc Employee retrieved from Oracle DB");
+		
+	}
+	
+	
+}

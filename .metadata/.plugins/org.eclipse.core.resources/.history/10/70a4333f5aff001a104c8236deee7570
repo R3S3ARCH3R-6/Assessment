@@ -1,0 +1,29 @@
+package eg1;
+
+public class MobileObjectCasting {
+
+	public static void main(String[] args) {
+		/*
+		 * Object casting 
+		 * 1) It's possible only and only b/w the parent and the child relationship only
+		 *  - we cannot convert one obj into just any obj
+		 * 2) If there is no relationship of if the child object is not created and you 
+		 *  try to convert your parent object to Child class, it will throw unchecked ClassCastException
+		 *   -(happens when we have no __ )
+		 * Relationship also means it cannot be siblings
+		 * - class having mult children (can only convert obj b/w parent and child, not b/w the children)
+		 * - siblings cannot be converted into each other
+		 * we can also convert b/w a grandparent and grandchild
+		 * 3) Conversion b/w siblings is not possible
+		 * 
+		 * Types of Casting
+		 * 1) Implicit Casting (Done by compiler) - 
+		 * 
+		 * */
+
+		//MobileV3 v3 = new MobileV1(); <--not casting (this is an error)
+		
+		//new MobileV1()
+	}
+
+}

@@ -1,0 +1,21 @@
+package abstractionclass_demo;
+
+//if you are going to have abstract methods, the class must be abstract too
+	//class is incomplete if abstract, so you cannot make instances/objects of it
+//this also helps us be able to sell software
+public abstract class EMS {
+	
+	//these are abstract and we are adding features right now
+	//these are the features we need to test
+	//tester/user doesn't need to know how we implemented it
+	public abstract void createEmployee();
+	public abstract void updateProject();
+	public abstract void deleteEmployee();
+	public abstract void getEmployee();
+
+	public void commonEmployeeBenefits(){
+		System.out.println("These benefits are common across all the Employees");
+	}
+}
+
+//tester will only care about capabilities or implementation?

@@ -1,0 +1,5 @@
+package abstractionclass_demo;
+
+public class AbcEmployer extends EMS {
+
+}

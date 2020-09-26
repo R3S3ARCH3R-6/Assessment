@@ -1,0 +1,23 @@
+package ex3;
+
+//this is how we handle custom exceptions
+public class Validator {
+
+	public boolean isValidMobileNumber(String mobileNumber){
+		
+		return;
+	}
+	
+	//if it is a subclass of checkedException, ...
+	public boolean isValidAge(int age){
+		if(age <= 0){
+			throw new BusinessCheckedException("age cannot be negative or zero");
+		}
+		
+		if(age < 18 || age > 35){
+			
+		}
+		
+		return true;
+	}
+}

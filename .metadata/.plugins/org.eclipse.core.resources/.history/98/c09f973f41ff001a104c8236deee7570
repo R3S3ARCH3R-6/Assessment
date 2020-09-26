@@ -1,0 +1,17 @@
+package ex3;
+
+public class ValidatorMain {
+
+	public static void main(String[] args) {
+		Validator v = new Validator();
+		try{
+			if(v.isValidAge(10)){
+				System.out.println("Age Validated");
+			}
+		}catch(BusinessCheckedException e){
+			System.out.println(e.getMessage());
+		}
+
+	}
+
+}

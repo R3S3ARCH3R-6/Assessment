@@ -1,0 +1,6 @@
+package ex3;
+
+//custom unchecked exception
+public class BusinessUncheckedException extends RuntimeException{
+
+}

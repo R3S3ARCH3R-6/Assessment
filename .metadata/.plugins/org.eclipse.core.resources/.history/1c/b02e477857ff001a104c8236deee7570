@@ -1,0 +1,7 @@
+package eg1;
+
+//inherits elem from MobileV1 too b/c MobileV2 extends MobileV1
+//this is an ex of multi-level inheritance
+public class MobileV3 extends MobileV2{
+
+}

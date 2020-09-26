@@ -1,0 +1,58 @@
+package ex1;
+
+/*
+ * 1) encapsulated class
+ * 2) model class in MVC (model-view-controller) <-- can modify and display data? 
+ * 3) POJO (plain old java object) class
+ * 4) DTO (Data transfer object) class
+ * 5) VO (value object) class
+ * 6) Bean class <--most simple class?
+ * */
+//Bring a has-A (this class has another class it is using as a data member) relationship here stating that Player plays for a Team(id, teamName, coachName);
+public class Player {
+	private int id;
+	private String name;
+	private int age;
+	
+	public Player(){
+		
+	}
+	
+	//best to follow naming conventions shown here
+	public Player(int id, String name, int age){
+		super();
+		this.id = id;
+		this.name = name;
+		this.age = age;
+	}
+	
+	@Override
+	public String toString(){
+		return "Player [id = " + id + ", name = " + name + ", age = " + age;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+}

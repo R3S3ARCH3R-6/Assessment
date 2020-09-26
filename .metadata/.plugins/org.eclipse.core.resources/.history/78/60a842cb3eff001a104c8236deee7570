@@ -1,0 +1,25 @@
+package ex2;
+
+import java.io.FileNotFoundException;
+
+public class Presenter {
+
+	public static void main(String[] args) {
+		Logic l = new Logic();
+
+		//compiler knows calling the "openFile" method can cause errors, so it knows the method must be called inside a try-catch block 
+		try{
+			l.openFile("hello.txt");
+		}catch(FileNotFoundException e){
+			System.out.println(e);
+		}
+
+		try{
+			int res = l.divide(10,0);
+			System.out.println("result is " + res);
+		}catch(ArithmeticException e){
+			System.out.println("cannot divide by zero");
+		}
+	}
+
+}

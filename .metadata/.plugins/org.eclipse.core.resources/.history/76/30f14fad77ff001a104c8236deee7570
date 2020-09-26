@@ -1,0 +1,8 @@
+package interface_demo;
+
+//this enables us to functional program in Java
+@FunctionalInterface
+public interface HelloFunctional {
+
+	void hello();
+}

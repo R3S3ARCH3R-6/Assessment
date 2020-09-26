@@ -1,0 +1,17 @@
+package eg2;
+
+public class Person {
+	
+	private int id;
+	private String name;
+	
+	
+}
+
+
+//com.somemodel...
+
+//Java package organization ex: 
+//org.pms.login.model
+//org.pms.login.business
+//org.pms.login.dao

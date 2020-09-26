@@ -1,0 +1,59 @@
+package eg1;
+
+//classes must be public or default
+	//a private class can be made, but it wouldn't make sense b/c it can only be accessed here
+public class Demo1 {
+	
+	public static void main(String[] args){
+		
+	}
+	
+	//private, protected, and static classes can exist
+		//interview question
+		//anything within a class can be static or private
+	//normal public classes can exist here too
+	//these will have their own .class files too
+	/*private class A{
+		
+	}
+	
+	protected class B{
+		
+	}
+	
+	public static class C{
+		
+	}*/
+	
+	
+	//not smart to write nested classes b/c it is difficult to test and manage (same with the classes below)
+	//best time to use them is if there is an alg you don't want others to access or keep exclusive
+	//knowledge for this is good, implementation is not smart
+	
+	//ex of how to access a public, nested class with an outside class
+	public class Y{
+		public void helloY(){
+			System.out.println("Hello Y");
+		}
+	}
+	
+	//(above) increases complexity too, making things worse for the sys?
+	//some libraries are like this?
+	//(above) increases maintenance issues too
+}
+
+//we must have 1 public class, but we can have mult. default classes in here too
+	//these classes will make a new .class file in the .bin folder
+	//not best practice, esp. if the other classes have very different behaviors
+/*class A{
+	
+}
+
+class B{
+	
+}
+
+class C{
+	
+}
+*/

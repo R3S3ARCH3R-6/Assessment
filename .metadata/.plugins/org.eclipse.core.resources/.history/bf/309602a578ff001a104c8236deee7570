@@ -1,0 +1,15 @@
+package functional_interfaces_lambda_demo;
+
+public class HelloFunctionalOldStyle implements HelloFunctional {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HelloFunctional h = new HelloFunctionalOldStyle();
+		h.hello();
+	}
+
+	@Override
+	public void hello(){
+		System.out.println("Hello hello");
+	}
+}
