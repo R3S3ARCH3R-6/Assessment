@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="G:\Employment\Revature Training\Revature-Certification\Test-code\java_class_alt\rocp1_revature\java_examples\set_demo"/>
+		<item value="G:\Employment\Revature Training\Revature-Certification\Test-code\list_demos"/>
+		<item value="G:\Employment\Revature Training\Revature-Certification\Test-code\java_class_alt\rocp1_revature\java_examples\map_demo"/>
 		<item value="G:\Employment\Revature Training\Revature-Certification\Test-code\java_class_alt\rocp1_revature\java_examples\inheritance_demo"/>
 		<item value="G:\Employment\Revature Training\Revature-Certification\Test-code\java_class_alt\rocp1_revature\java_examples\access_specifiers_demo"/>
 		<item value="G:\Employment\Revature Training\Revature-Certification\Test-code\java_class_alt\rocp1_revature\java_examples\wrappers_demo"/>
