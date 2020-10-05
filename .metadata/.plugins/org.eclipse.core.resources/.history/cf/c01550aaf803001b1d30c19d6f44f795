@@ -1,0 +1,15 @@
+package com.app.main;
+
+import com.app.dao.PlayerDAO;
+
+public class PlayerMain {
+
+	public static void main(String[] args) {
+		
+		PlayerDAO dao = new PlayerDAO();
+		
+		int c = dao.createPlayer(new Player(110, "Rudra", 24, "Kings", "m", "Chennai"));
+
+	}
+
+}

@@ -1,0 +1,25 @@
+package com.app.main;
+
+import com.app.dao.PlayerDAO;
+import com.app.dao.impl.PlayerDAOImpl;
+import com.app.model.Player;
+
+//this currently doesn't work b/c the SQL database doesn't exist yet
+public class PlayerMain {
+
+	public static void main(String[] args) {
+		
+		Player dao = new PlayerDAOImpl();
+		Player player = new PlayerDAOImpl(110, "Rudra", 24, "Kings", "m", "Chennai");
+		int c = dao.createPlayer(player);
+
+		//can check in SQL database afterwards (we've added this to the DB)
+		if(c==1){
+			System.out.println("Player registered with below details");
+			System.out.println(player);
+		}else{
+			System.out.println("Failed registration");
+		}
+	}
+
+}

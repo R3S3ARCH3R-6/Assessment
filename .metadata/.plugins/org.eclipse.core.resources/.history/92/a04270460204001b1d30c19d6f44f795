@@ -1,0 +1,104 @@
+package com.app.dao.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.app.dao.PlayerDAO;
+import com.app.dbutil.MySqlConnection;
+import com.app.model.Player;
+
+public class PlayerDAOImpl implements PlayerDAO {
+
+	//insert using the prepared statement?
+	
+	//we will be writing the presenter DB interactions here?
+	@Override
+	public int createPlayer(Player player){
+		int c =0;
+		
+		//private resources
+			//no need to release connections, JVM releases them/will take care of when it will be used 
+		try(Connection connection = MySqlConnection.getConnection()){
+			String sql = "insert into player(id, name, age, city, gener, city)";
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+				//dynamically supplies sql data
+			
+			//closer to pattern, but not yet
+			//6 questions/database fields/columns, 6 statements we need to get below
+			preparedStatement.setInt(1, player.getId());
+			preparedStatement.setString(2, player.getName());
+			preparedStatement.setInt(3, player.getAge());
+			preparedStatement.setString(4, player.getCity());
+			preparedStatement.setString(5, player.getGender());
+			preparedStatement.setString(6, player.getTeamName());
+			
+			c=preparedStatement.executeUpdate();	//we don't insert the query b/c we already inserted it in this statement? 
+			
+		}catch(ClassNotFoundException | SQLException e){
+			//presenter handles connection/exception
+			System.out.println(e);
+			
+			//6 fields, 6 connections
+			//dynamically supply values to query
+		}
+		
+		return c;
+	}
+	
+	@Override
+	public List<Player> getAllPlayers(){
+		List<Player> playersList = new ArrayList<>();
+		
+		try(Connection connection = MySqlConnection.getConnection()){
+			String sql = "select id, name, age, city, gender, teamName, from player";
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			
+			ResultSet resultSet = preparedStatement.executeQuery();
+			while(resultSet.next()){
+				Player player = new Player();
+				player.setId(resultSet.getInt("id"));
+				player.setAge(resultSet.getInt("age"));
+			}
+		}catch(ClassNotFoundException | SQLException e){
+			System.out.println(e);
+		}
+		
+		return playersList;
+	}
+	
+	@Override
+	//id is a primary key
+	public int updatePlayer(int id, String city){
+		
+		try(Connection connection = MySqlConnection.getConnection()){
+			String sql = "update player set city=? where id=?";	//update query
+		
+			//PreparedStatement - statement filled with generic values that we can then replace
+				//this is an obj
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			ResultSet resultSet = preparedStatement.executeQuery();
+				//executes player
+			while(resultSet.next()){
+				Player player = new Player();
+				player.setCity(resultSet.getString("city"));
+				player.setId(resultSet.getInt("id"));
+			}
+			
+		}catch(ClassNotFoundException | SQLException e){
+			
+		}
+		
+		
+		return 0;
+	}
+	
+	@Override
+	public void deletePlayer(int id){
+		String sql = "delete from player where id=?";
+		
+	}
+}

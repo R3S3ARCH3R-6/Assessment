@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;PlayerDAOImpl.java&apos; to &apos;jdbc_demo_2/src/main/java/com.app.dao.impl&apos;&#x0D;&#x0A;- Original project: &apos;jdbc_demo_2&apos;&#x0D;&#x0A;- Destination element: &apos;jdbc_demo_2/src/main/java/com.app.dao.impl&apos;&#x0D;&#x0A;- Original element: &apos;com.app.dao.PlayerDAOImpl.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src\/main\/java&lt;com.app.dao.impl" element1="/src\/main\/java&lt;com.app.dao{PlayerDAOImpl.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1601565846033" units="1" version="1.0"/>
+</session>

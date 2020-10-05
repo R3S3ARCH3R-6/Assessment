@@ -1,0 +1,9 @@
+package com.app.dao;
+
+import com.app.model.Player;
+
+//abstract layer to list out all services, so we know what to be tested and expected
+public interface PlayerDAO {
+
+	public int createPlayer(Player player);
+}

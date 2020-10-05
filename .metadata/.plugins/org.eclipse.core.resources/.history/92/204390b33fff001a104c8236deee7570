@@ -1,6 +1,0 @@
-package ex3;
-
-//this is our custom exception class
-public class BusinessCheckedException extends Exception {
-
-}

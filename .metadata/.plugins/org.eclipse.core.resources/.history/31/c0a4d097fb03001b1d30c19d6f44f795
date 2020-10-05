@@ -1,0 +1,60 @@
+package com.app.dao.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import com.app.dao.PlayerDAO;
+import com.app.dbutil.MySqlConnection;
+import com.app.model.Player;
+
+public class PlayerDAOImpl implements PlayerDAO {
+
+	//insert using the prepared statement?
+	
+	//we will be writing the presenter DB interactions here?
+	@Override
+	public int createPlayer(Player player){
+		int c =0;
+		
+		//private resources
+			//no need to release connections, JVM releases them/will take care of when it will be used 
+		try(Connection connection = MySqlConnection.getConnection()){
+			String sql = "insert into player(id, name, age, city, gener, city)";
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+				//dynamically supplies sql data
+			
+			//closer to pattern, but not yet
+			//6 questions/database fields/columns, 6 statements we need to get below
+			preparedStatement.setInt(1, player.getId());
+			preparedStatement.setString(2, player.getName());
+			preparedStatement.setInt(3, player.getAge());
+			preparedStatement.setString(4, player.getCity());
+			preparedStatement.setString(5, player.getGender());
+			preparedStatement.setString(6, player.getTeamName());
+			
+			c=preparedStatement.executeUpdate();	//we don't insert the query b/c we already inserted it in this statement? 
+			
+		}catch(ClassNotFoundException | SQLException e){
+			//presenter handles connection/exception
+			System.out.println(e);
+			
+			//6 fields, 6 connections
+			//dynamically supply values to query
+		}
+		
+		return c;
+	}
+	
+	@Override
+	public List<Player> getAllPlayers(){
+		List<Player> playersList = new ArrayList<>();
+		
+		try(Connection connection = MySqlConnection.getConnection()){
+			
+		}
+		
+		return playersList;
+	}
+}
